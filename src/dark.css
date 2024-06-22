@@ -1,9 +1,0 @@
-/* You can add global styles to this file, and also import other style files */
-@import "primeng/resources/themes/lara-dark-blue/theme.css";
-
-.grid-stack-item-content {
-    border-style: solid;
-    border-color: transparent !important;
-    border-radius: 4px;
-    background-color: var(--surface-a);
-}
