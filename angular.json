@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "DemoGridStackJS:build:production"
+              "buildTarget": "DemoGridStackJS:build:production"
             },
             "development": {
-              "browserTarget": "DemoGridStackJS:build:development"
+              "buildTarget": "DemoGridStackJS:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "DemoGridStackJS:build"
+            "buildTarget": "DemoGridStackJS:build"
           }
         },
         "test": {
