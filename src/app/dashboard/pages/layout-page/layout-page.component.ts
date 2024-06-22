@@ -1,6 +1,6 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { GridstackComponent, NgGridStackOptions, elementCB, gsCreateNgComponents, nodesCB } from 'gridstack/dist/angular';
-import { GridStack, GridStackOptions, GridStackWidget } from 'gridstack';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { GridstackComponent, NgGridStackOptions, elementCB } from 'gridstack/dist/angular';
+import { GridStack, GridStackOptions } from 'gridstack';
 import { Test1Component } from '../../components/test1/test1.component';
 import { Test2Component } from '../../components/test2/test2.component';
 

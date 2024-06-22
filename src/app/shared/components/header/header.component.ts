@@ -1,5 +1,4 @@
-import { DOCUMENT } from '@angular/common';
-import { Component, Inject } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,19 +7,7 @@ import { Component, Inject } from '@angular/core';
 })
 export class HeaderComponent {
 
-  checked = false
-  modo = "Modo Claro"
-
-  constructor(@Inject(DOCUMENT) private document: Document) {
-
-  }
-
-  changeTheme() {
-    let theme = this.document.getElementById('app-theme') as HTMLLinkElement
-    if (theme) {
-      theme.href = this.checked ? 'dark.css' : 'light.css'
-      this.modo = this.checked ? 'Modo Oscuro' : 'Modo Claro'
-    }
+  constructor() {
 
   }
 

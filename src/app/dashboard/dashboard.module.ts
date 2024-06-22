@@ -6,8 +6,6 @@ import { PrimengModule } from '../primeng/primeng.module';
 import { SharedModule } from '../shared/shared.module';
 import { GridstackModule } from 'gridstack/dist/angular';
 
-
-
 @NgModule({
   declarations: [
     LayoutPageComponent,
