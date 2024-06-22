@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import "primeflex/primeflex.css";
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "gridstack/dist/gridstack.min.css";
+
+.grid-stack-item {
+    padding: 0;
+    margin: 0;
+    box-shadow: inset;
+}
+
+.grid-stack-item-content {
+    border-style: solid;
+    border-color: whitesmoke;
+    border-radius: 4px;
+    background-color: var(--surface-a);
+}
+
+.p-card {
+    box-shadow: none !important;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}

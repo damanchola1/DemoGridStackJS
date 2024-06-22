@@ -1,0 +1,20 @@
+<div style="position: sticky; top: 0px; z-index: 9999;">
+    <app-header></app-header>
+</div>
+
+<div class="flex justify-content-center flex-wrap">
+    <p-button label="Agregar" [raised]="true" class="m-2" (click)="add()"></p-button>
+    <p-button label="Guardar" [raised]="true" severity="success" class="m-2" (click)="saveGrid()"></p-button>
+    <p-button label="Limpiar" [raised]="true" severity="secondary" class="m-2" (click)="clearGrid()"></p-button>
+    <p-button label="Cargar" [raised]="true" severity="info" class="m-2" (click)="loadGrid()"></p-button>
+    <p-button label="Eliminar" [raised]="true" severity="danger" class="m-2" (click)="delete()"></p-button>
+</div>
+
+<div class="h-full">
+    <gridstack [options]="gridOptionsFull" (changeCB)="onChange()" class="mt-2">
+    </gridstack>
+</div>
+
+<div class="fixed bottom-0 left-0 bg-orange-400 w-full">
+    <app-footer></app-footer>
+</div>
