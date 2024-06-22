@@ -7,7 +7,6 @@ import { PrimeNGConfig } from 'primeng/api';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'intradiApp';
 
   constructor(private primengConfig: PrimeNGConfig) { }
 
