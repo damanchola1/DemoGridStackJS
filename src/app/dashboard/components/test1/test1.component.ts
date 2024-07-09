@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
 import { PrimengModule } from 'src/app/primeng/primeng.module';
 
 interface Product {
@@ -17,11 +18,15 @@ interface Product {
 @Component({
   selector: 'app-test1',
   standalone: true,
-  imports: [PrimengModule],
+  imports: [PrimengModule, NgxSpinnerModule],
   templateUrl: './test1.component.html',
   styleUrl: './test1.component.css'
 })
 export class Test1Component {
+
+  constructor(private spinnerService:NgxSpinnerService){
+
+  }
 
   products: Product[] = [
     {
@@ -181,5 +186,16 @@ export class Test1Component {
       rating: 4
     },
   ]
+
+  showSpinner(){
+    this.spinnerService.show()
+    this.hideSpinner()
+  }
+
+  hideSpinner(){
+    setTimeout(() => {
+      this.spinnerService.hide()
+    }, 5000000);
+  }
 
 }

@@ -35,8 +35,8 @@ export class LayoutPageComponent implements AfterViewInit {
   public gridOptionsFull: NgGridStackOptions = {
     ...this.gridOptions,
     children: [ // or call load()/addWidget() with same data
-      { x: 0, y: 1, w: 8, h: 1, minW: 2, selector: 'app-test1', id: '1', autoPosition: true },
-      { x: 1, y: 0, selector: 'app-test2', id: '2', autoPosition: true },
+      { x: 0, y: 1, w: 9, h: 18, selector: 'app-test1', id: '1', autoPosition: true },
+      { x: 0, y: 1, w: 9, h: 18, selector: 'app-test2', id: '1', autoPosition: true },
     ]
   }
 

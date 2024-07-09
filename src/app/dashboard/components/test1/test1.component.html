@@ -1,38 +1,43 @@
-<p-card>
-    <ng-template pTemplate="header">
-        <div class="flex justify-content-between flex-wrap">
-            <h1 class="m-4">Test1</h1>
-            <p-button icon="pi pi-times" severity="danger" class="m-4"></p-button>
-        </div>
-        <hr>
-    </ng-template>
-
-    <p-table [value]="products" [tableStyle]="{'min-width': '60rem'}">
+<div class="relative">
+    <p-card>
         <ng-template pTemplate="header">
-            <tr>
-                <th pSortableColumn="code" style="width:20%">
-                    Code <p-sortIcon field="code" />
-                </th>
-                <th pSortableColumn="name" style="width:20%">
-                    Name <p-sortIcon field="name" />
-                </th>
-                <th pSortableColumn="category" style="width:20%">
-                    Category <p-sortIcon field="category" />
-                </th>
-                <th pSortableColumn="quantity" style="width:20%">
-                    Quantity <p-sortIcon field="quantity" />
-                </th>
-            </tr>
+            <div class="flex justify-content-between flex-wrap">
+                <h1 class="m-4">Test1</h1>
+                <p-button icon="pi pi-times" severity="danger" class="m-4"></p-button>
+            </div>
+            <hr>
         </ng-template>
-        <ng-template pTemplate="body" let-product>
-            <tr>
-                <td>{{ product.code }}</td>
-                <td>{{ product.name }}</td>
-                <td>{{ product.category }}</td>
-                <td>{{ product.quantity }}</td>
-            </tr>
-        </ng-template>
-    </p-table>
 
+        <p-button label="RunSpinner" [raised]="true" class="m-2" (click)="showSpinner()"></p-button>
 
-</p-card>
+        <p-table [value]="products" [tableStyle]="{'min-width': '60rem'}">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th pSortableColumn="code" style="width:20%">
+                        Code <p-sortIcon field="code" />
+                    </th>
+                    <th pSortableColumn="name" style="width:20%">
+                        Name <p-sortIcon field="name" />
+                    </th>
+                    <th pSortableColumn="category" style="width:20%">
+                        Category <p-sortIcon field="category" />
+                    </th>
+                    <th pSortableColumn="quantity" style="width:20%">
+                        Quantity <p-sortIcon field="quantity" />
+                    </th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-product>
+                <tr>
+                    <td>{{ product.code }}</td>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.category }}</td>
+                    <td>{{ product.quantity }}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </p-card>
+
+    <ngx-spinner type="ball-scale-multiple" [fullScreen]="false" [zIndex]="0"></ngx-spinner>
+
+</div>
