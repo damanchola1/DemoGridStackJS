@@ -50,7 +50,7 @@ export class LayoutPageComponent implements AfterViewInit {
 
   public add() {
 
-    const newWidget = { x: 0, y: 1, w: 10, h: 1, minW: 2, selector: 'app-test1', id: '10', autoPosition: true }
+    const newWidget = { x: 0, y: 1, w: 10, h: 1, minW: 2, selector: 'app-test1', id: 'Daniel', autoPosition: true }
     this.gridComp?.addWidget(newWidget);
 
   }

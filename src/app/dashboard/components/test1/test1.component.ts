@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostBinding, Renderer2 } from '@angular/core';
+import { GridstackItemComponent } from 'gridstack/dist/angular';
 import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
 import { PrimengModule } from 'src/app/primeng/primeng.module';
 
@@ -20,13 +21,22 @@ interface Product {
   standalone: true,
   imports: [PrimengModule, NgxSpinnerModule],
   templateUrl: './test1.component.html',
+  styles: [
+    `
+    :host {
+      display: block !important;
+    }
+    `
+  ],
   styleUrl: './test1.component.css'
 })
 export class Test1Component {
 
-  constructor(private spinnerService:NgxSpinnerService){
-
+  constructor(private spinnerService: NgxSpinnerService,
+    private gridStack: GridstackItemComponent, private element: ElementRef, private render: Renderer2) {
+    console.log(gridStack);
   }
+
 
   products: Product[] = [
     {
@@ -187,15 +197,19 @@ export class Test1Component {
     },
   ]
 
-  showSpinner(){
+  showSpinner() {
+    let hola = this.element.nativeElement.parentElement
+    this.render.setStyle(hola, 'overflow', 'hidden')
     this.spinnerService.show()
     this.hideSpinner()
   }
 
-  hideSpinner(){
+  hideSpinner() {
     setTimeout(() => {
+      let hola = this.element.nativeElement.parentElement
+      this.render.setStyle(hola, 'overflow', 'auto')
       this.spinnerService.hide()
-    }, 5000000);
+    }, 3000);
   }
 
 }
